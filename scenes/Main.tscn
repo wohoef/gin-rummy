@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://epipav01grl3"]
+
+[ext_resource type="Script" uid="uid://dsm4rc4s4ytn3" path="res://scripts/CardManager.gd" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://dumu3h6hunc1c" path="res://scripts/PlayerHand.gd" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://bb2ngmp37f0kf" path="res://scenes/Deck.tscn" id="4_vcsgt"]
+[ext_resource type="Script" uid="uid://bpv23gw2dla06" path="res://scripts/GameManager.gd" id="6_c01mt"]
+[ext_resource type="Script" uid="uid://b5f4iokp8kw0c" path="res://scripts/VillainHand.gd" id="6_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://kvnywdqtb3cc" path="res://scenes/DiscardPile.tscn" id="6_nxtc6"]
+[ext_resource type="Script" uid="uid://bfcun1a572l6h" path="res://scenes/KnockButton.gd" id="7_nxtc6"]
+[ext_resource type="Script" uid="uid://bmw8aakrko8hx" path="res://scenes/SortButton.gd" id="8_jlsqs"]
+
+[node name="Main" type="Node2D" unique_id=1329313973]
+
+[node name="GameManager" type="Node" parent="." unique_id=583400073]
+script = ExtResource("6_c01mt")
+
+[node name="Deck" parent="." unique_id=20398333 instance=ExtResource("4_vcsgt")]
+position = Vector2(275, 170)
+
+[node name="CardManager" type="Node2D" parent="." unique_id=246474025]
+script = ExtResource("2_rvslj")
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=598819547]
+script = ExtResource("3_0bbpv")
+
+[node name="DiscardPile" parent="." unique_id=1946053369 instance=ExtResource("6_nxtc6")]
+position = Vector2(342, 170)
+
+[node name="VillainHand" type="Node2D" parent="." unique_id=564755308]
+script = ExtResource("6_jlsqs")
+
+[node name="KnockButton" type="Button" parent="." unique_id=1757524772]
+offset_left = 391.0
+offset_top = 135.0
+offset_right = 444.0
+offset_bottom = 160.0
+script = ExtResource("7_nxtc6")
+
+[node name="SortButton" type="Button" parent="." unique_id=1543292310]
+offset_left = 359.0
+offset_top = 381.0
+offset_right = 452.0
+offset_bottom = 424.0
+script = ExtResource("8_jlsqs")

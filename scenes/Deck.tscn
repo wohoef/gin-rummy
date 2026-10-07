@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bb2ngmp37f0kf"]
+
+[ext_resource type="Script" uid="uid://cwennvbeeqhku" path="res://scripts/Deck.gd" id="1_1efqa"]
+[ext_resource type="Texture2D" uid="uid://dhn5jei3rh2om" path="res://assets/Decker.png" id="2_s22ja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcsgt"]
+size = Vector2(50, 74)
+
+[node name="Deck" type="Node2D" unique_id=20398333]
+z_index = -1
+script = ExtResource("1_1efqa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1780548492]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=399186097]
+shape = SubResource("RectangleShape2D_vcsgt")
+
+[node name="DeckImage" type="Sprite2D" parent="." unique_id=705550864]
+texture = ExtResource("2_s22ja")
